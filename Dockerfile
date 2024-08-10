@@ -7,13 +7,13 @@
 # Pull base image.
 FROM debian:latest
 
-MAINTAINER hihouhou < hihouhou@hihouhou.com >
+LABEL org.opencontainers.image.authors="hihouhou < hihouhou@hihouhou.com >"
 
 ENV GOROOT /usr/local/go
 ENV GOPATH /opt/lndmon
 ENV PATH $GOPATH/bin:$GOROOT/bin:$PATH
-ENV GO_VERSION 1.13.5
-ENV LNDMON_VERSION v0.1.0
+ENV GO_VERSION 1.18
+ENV LNDMON_VERSION v0.2.7
 
 # Update & install packages
 RUN apt-get update && \
